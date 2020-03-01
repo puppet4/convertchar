@@ -1,0 +1,39 @@
+<idea-plugin>
+  <id>com.tudo</id>
+  <name>convertchar</name>
+  <version>1.0</version>
+  <vendor email="lvkangjia2018@163.com" >TUDO</vendor>
+
+   <description>自动替换中文逗号、分号、句号、引号等字符，方便程序员日常编码、减少头发掉落数量、</description>
+
+  <change-notes>
+    <![CDATA[
+      主要功能：</br>
+      自动替换中文的逗号、分号、句号、括号等代码常用字符;</br>
+      减少头发掉落数量;</br>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationConfigurable instance="com.tudo.ConvertCharSettingComponent"></applicationConfigurable>
+  </extensions>
+
+  <actions>
+    <action id="com.tudo.CharReplaceTypedHandler"
+            class="com.tudo.EditorHandlerIllustration"
+    >
+    </action>
+  </actions>
+
+</idea-plugin>
